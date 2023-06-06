@@ -1,0 +1,114 @@
+:root {
+    --primary-color: #1e90ff;
+    --secondary-color: #222;
+    --light-color: #f2f2f2;
+    --dark-color: #333;
+    --code-color: #ff0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, var(--light-color), var(--secondary-color));
+    color: var(--dark-color);
+}
+
+.app {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--light-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.form, .file-input, .files-list {
+    margin-bottom: 30px;
+}
+
+.form h2 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-input button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.form-input button:hover {
+    background-color: var(--dark-color);
+}
+
+.form-input b, .form-input span {
+    display: block;
+    text-align: center;
+}
+
+.form-input span {
+    color: var(--code-color);
+    font-size: 1.6em;
+    font-family: 'Courier New', monospace;
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid var(--dark-color);
+}
+
+.file-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px dashed var(--primary-color);
+    border-radius: 10px;
+    transition: border 0.3s ease;
+}
+
+.file-input:hover {
+    border: 2px dashed var(--dark-color);
+}
+
+.file-input label {
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.files-list .title {
+    color: var(--primary-color);
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+.files-list .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.files-list .item .progress {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.files-list .item .filename {
+    font-family: 'Courier New', monospace;
+}
