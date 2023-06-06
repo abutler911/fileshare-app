@@ -1,34 +1,34 @@
 :root {
+    --code-color: #ff0000;
+    --dark-color: #333;
+    --light-color: #f2f2f2;
     --primary-color: #1e90ff;
     --secondary-color: #222;
-    --light-color: #f2f2f2;
-    --dark-color: #333;
-    --code-color: #ff0000;
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
     background: linear-gradient(45deg, var(--light-color), var(--secondary-color));
     color: var(--dark-color);
+    font-family: 'Arial', sans-serif;
 }
 
 .app {
-    width: 80%;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    border-radius: 10px;
     background-color: var(--light-color);
+    border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    width: 80%;
 }
 
-.form, .file-input, .files-list {
+.file-input, .files-list, .form {
     margin-bottom: 30px;
 }
 
@@ -39,13 +39,18 @@ body {
     text-align: center;
 }
 
+.form-input b, .form-input span {
+    display: block;
+    text-align: center;
+}
+
 .form-input button {
     background-color: var(--primary-color);
-    color: #fff;
     border: none;
     border-radius: 50px;
-    padding: 10px 20px;
+    color: #fff;
     font-size: 1.2em;
+    padding: 10px 20px;
     transition: background-color 0.3s ease;
 }
 
@@ -53,28 +58,24 @@ body {
     background-color: var(--dark-color);
 }
 
-.form-input b, .form-input span {
-    display: block;
-    text-align: center;
-}
-
 .form-input span {
+    border: 2px solid var(--dark-color);
     color: var(--code-color);
-    font-size: 1.6em;
+    display: block;
     font-family: 'Courier New', monospace;
+    font-size: 1.6em;
     margin-top: 10px;
     padding: 10px;
-    border: 2px solid var(--dark-color);
 }
 
 .file-input {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
     border: 2px dashed var(--primary-color);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
     transition: border 0.3s ease;
 }
 
@@ -83,8 +84,28 @@ body {
 }
 
 .file-input label {
-    cursor: pointer;
     color: var(--primary-color);
+    cursor: pointer;
+}
+
+.files-list .item {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.files-list .item .filename {
+    font-family: 'Courier New', monospace;
+}
+
+.files-list .item .progress {
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .files-list .title {
@@ -93,22 +114,78 @@ body {
     margin-bottom: 20px;
 }
 
-.files-list .item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.join-screen .form label {
+    color: #222;
+    font-size: 18px;
+}
+
+.join-screen .form input {
+    border: 1px solid #111;
+    color: var(--code-color);
+    display: block;
+    font-family: monospace;
+    font-size: 20px;
+    margin: 10px 0px;
+    max-width: 200px;
     padding: 10px;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+    width: 100%;
 }
 
-.files-list .item .progress {
-    color: var(--primary-color);
-    font-weight: bold;
+.fs-screen {
+    padding: 20px;
 }
 
-.files-list .item .filename {
-    font-family: 'Courier New', monospace;
+.fs-screen .file-input {
+    border: 2px dashed #555;
+    width: 100%;
+}
+
+.fs-screen .file-input label {
+    color: #111;
+    display: block;
+    font-size: 18px;
+    padding: 40px 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.fs-screen .file-input input {
+    display: none;
+}
+
+.fs-screen .files-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.fs-screen .files-list .title {
+    color: #555;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.fs-screen .files-list .item {
+    width: 33.33%;
+    min-width: 200px;
+    border: 1px solid #eee;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.05);
+
+}
+
+.fs-screen .files-list .item .progress {
+    padding: 30px;
+    text-align: center;
+    font-size: 50px;
+    font-family: monospace;
+    color: #222;
+}
+
+.fs-screen .files-list .item .filename {
+    font-size: 16px;
+    padding: 5px;
+    border-top: 1px solid #eee;
 }
