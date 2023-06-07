@@ -13,10 +13,22 @@
 }
 
 body {
-    background: linear-gradient(45deg, var(--light-color), var(--secondary-color));
+    background: linear-gradient(0deg, var(--light-color), var(--secondary-color));
     color: var(--dark-color);
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-repeat: no-repeat;
+    height: 100vh;
+
 }
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
 
 .app {
     background-color: var(--light-color);
