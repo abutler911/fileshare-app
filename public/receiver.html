@@ -4,36 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FileShare!</title>
+    <title>QuickBeam - Secure File Sharing</title>
+    <meta
+      name="description"
+      content="QuickBeam is a secure file sharing platform. Share files quickly and easily with FileShare!."
+    />
+    <meta
+      name="keywords"
+      content="QuickBeam, File Sharing, Secure File Sharing"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Andrew Butler" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="app">
-      <h1>Quick Beam - File Sharing</h1>
-      <nav><a class='nav-link' href="/">Send Files</a></nav>
-      <hr />
-      <div class="screen join-screen active">
-        <div class="form">
-          <h2>Share your files securely</h2>
-          <div class="form-input">
-            <label for="join-id">Join ID</label>
-            <input type="text" id="join-id" />
-          </div>
-          <div class="form-input">
-            <button id="receiver-start-con-btn">Connect</button>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="app">
+            <h1>Quick Beam - File Sharing</h1>
+            <nav><a class="nav-link" href="/">Send Files</a></nav>
+            <hr />
+
+            <div class="screen join-screen active">
+              <div class="form">
+                <h2>Share your files securely</h2>
+                <div class="form-input">
+                  <label for="join-id">Join ID</label>
+                  <input type="text" id="join-id" />
+                </div>
+                <div class="form-input">
+                  <button id="receiver-start-con-btn">Connect</button>
+                </div>
+              </div>
+              <div class="form-instruction">
+                <p>
+                  To receive files, enter the 'Join ID' provided by the sender
+                  and click 'Connect'.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="form-instruction">
-          <p>To receive files, enter the 'Join ID' provided by the sender and click 'Connect'.</p>
-        </div>
-      </div>
-      </div>
-      <div class="screen fs-screen">
-        <div class="files-list">
-          <div class="title">Shared Files:</div>
+        <div class="col-md-6">
+          <div class="screen fs-screen">
+            <div class="files-list container-fluid">
+              <div class="title">Shared Files:</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.1/download.min.js"
