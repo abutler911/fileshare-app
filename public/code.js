@@ -37,10 +37,10 @@
       reader.onload = function (e) {
         let buffer = new Uint8Array(reader.result);
         let el = document.createElement("div");
-        el.classList.add("item");
+        el.classList.add("item", "row");
         el.innerHTML = `
-        <div class="progress">0%</div>
-        <div class="filename">${file.name}</div>
+        <div class="col-sm-4 progress">0%</div>
+        <div class="col-sm-8 filename text-break">${file.name}</div>
         `;
         document.querySelector(".files-list").appendChild(el);
         shareFile(
